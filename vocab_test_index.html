@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>TOEIC 550 單字測驗（30 題完整版）</title>
+
+<style>
+body{
+  font-family:"Noto Sans TC",sans-serif;
+  background:#f7f5f2;
+  color:#444;
+  padding:20px;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 4px 14px rgba(0,0,0,.1);
+}
+h1,h2{text-align:center}
+.section{margin-top:40px}
+.question{
+  margin:18px 0;
+  padding:15px;
+  background:#fafafa;
+  border-left:6px solid #c8c2bd;
+  border-radius:8px;
+}
+.option{display:block;margin:6px 0}
+.explain{
+  display:none;
+  margin-top:10px;
+  padding:12px;
+  background:#eef2f1;
+  border-radius:8px;
+  font-size:14px;
+}
+.correct{color:#2e7d32;font-weight:bold}
+.wrong{color:#c62828;font-weight:bold}
+
+button{
+  display:block;
+  margin:40px auto;
+  padding:14px 40px;
+  font-size:18px;
+  border:none;
+  border-radius:10px;
+  background:#6a5acd;
+  color:white;
+  cursor:pointer;
+}
+button:hover{background:#5a4bcf}
+
+.result{
+  display:none;
+  margin-top:30px;
+  padding:20px;
+  background:#f0edea;
+  border-radius:12px;
+}
+.score{font-size:18px;margin:6px 0}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📝 TOEIC 550 單字＋片語測驗</h1>
+<p style="text-align:center">共 30 題｜送出後顯示正確答案與解析</p>
+
+<form id="quiz">
+
+<!-- ================= 職場 ================= -->
+<div class="section">
+<h2>💼 職場辦公室（10 題）</h2>
+
+<div class="question" data-answer="B" data-explain="deadline 指「截止期限」，在報告、專案、作業情境中最常見。">
+1. We must finish the report before the ______.
+<label class="option"><input type="radio" name="q1" value="A"> schedule</label>
+<label class="option"><input type="radio" name="q1" value="B"> deadline</label>
+<label class="option"><input type="radio" name="q1" value="C"> policy</label>
+<label class="option"><input type="radio" name="q1" value="D"> budget</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="project 指「專案」，approve a project 是標準職場用法。">
+2. The manager approved the new ______ yesterday.
+<label class="option"><input type="radio" name="q2" value="A"> project</label>
+<label class="option"><input type="radio" name="q2" value="B"> luggage</label>
+<label class="option"><input type="radio" name="q2" value="C"> destination</label>
+<label class="option"><input type="radio" name="q2" value="D"> route</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="B" data-explain="policy 指公司規定；follow company policy 是 TOEIC 固定句型。">
+3. Employees must follow company ______.
+<label class="option"><input type="radio" name="q3" value="A"> contract</label>
+<label class="option"><input type="radio" name="q3" value="B"> policy</label>
+<label class="option"><input type="radio" name="q3" value="C"> schedule</label>
+<label class="option"><input type="radio" name="q3" value="D"> performance</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="in charge of 表示「負責某事」，常用於職務說明。">
+4. She is ______ managing the sales team.
+<label class="option"><input type="radio" name="q4" value="A"> in charge of</label>
+<label class="option"><input type="radio" name="q4" value="B"> check in</label>
+<label class="option"><input type="radio" name="q4" value="C"> make a reservation</label>
+<label class="option"><input type="radio" name="q4" value="D"> arrive on time</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="B" data-explain="department 指公司內的部門，例如 HR department。">
+5. The HR ______ is responsible for hiring new staff.
+<label class="option"><input type="radio" name="q5" value="A"> terminal</label>
+<label class="option"><input type="radio" name="q5" value="B"> department</label>
+<label class="option"><input type="radio" name="q5" value="C"> platform</label>
+<label class="option"><input type="radio" name="q5" value="D"> campaign</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="B" data-explain="meet the deadline 表示「準時完成」，是職場常見片語。">
+6. We need to ______ the deadline for this project.
+<label class="option"><input type="radio" name="q6" value="A"> miss</label>
+<label class="option"><input type="radio" name="q6" value="B"> meet</label>
+<label class="option"><input type="radio" name="q6" value="C"> cancel</label>
+<label class="option"><input type="radio" name="q6" value="D"> refund</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="attend a meeting 表示「參加會議」，動詞 attend 是考試常考。">
+7. The supervisor asked everyone to attend the ______.
+<label class="option"><input type="radio" name="q7" value="A"> meeting</label>
+<label class="option"><input type="radio" name="q7" value="B"> itinerary</label>
+<label class="option"><input type="radio" name="q7" value="C"> fare</label>
+<label class="option"><input type="radio" name="q7" value="D"> route</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="B" data-explain="overtime 指加班，是不可數名詞。">
+8. He worked ______ to finish the task.
+<label class="option"><input type="radio" name="q8" value="A"> on time</label>
+<label class="option"><input type="radio" name="q8" value="B"> overtime</label>
+<label class="option"><input type="radio" name="q8" value="C"> by chance</label>
+<label class="option"><input type="radio" name="q8" value="D"> at random</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="apply for a position 表示「應徵職位」。">
+9. She will ______ a position in the marketing department.
+<label class="option"><input type="radio" name="q9" value="A"> apply for</label>
+<label class="option"><input type="radio" name="q9" value="B"> deal with</label>
+<label class="option"><input type="radio" name="q9" value="C"> take off</label>
+<label class="option"><input type="radio" name="q9" value="D"> pick up</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="contract 指合約，簽約前一定要閱讀。">
+10. Please read the ______ carefully before signing.
+<label class="option"><input type="radio" name="q10" value="A"> contract</label>
+<label class="option"><input type="radio" name="q10" value="B"> luggage</label>
+<label class="option"><input type="radio" name="q10" value="C"> shuttle</label>
+<label class="option"><input type="radio" name="q10" value="D"> aisle</label>
+<div class="explain"></div>
+</div>
+</div>
+
+<!-- ================= 旅遊 ================= -->
+<div class="section">
+<h2>✈️ 旅遊與交通（10 題）</h2>
+
+<div class="question" data-answer="A" data-explain="reservation 指訂房或訂位，是旅遊高頻字。">
+11. I made a hotel ______ online.
+<label class="option"><input type="radio" name="q11" value="A"> reservation</label>
+<label class="option"><input type="radio" name="q11" value="B"> campaign</label>
+<label class="option"><input type="radio" name="q11" value="C"> budget</label>
+<label class="option"><input type="radio" name="q11" value="D"> approval</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="B" data-explain="boarding pass 是登機時必備文件。">
+12. Don’t forget your ______ when boarding the plane.
+<label class="option"><input type="radio" name="q12" value="A"> platform</label>
+<label class="option"><input type="radio" name="q12" value="B"> boarding pass</label>
+<label class="option"><input type="radio" name="q12" value="C"> policy</label>
+<label class="option"><input type="radio" name="q12" value="D"> schedule</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="B" data-explain="delay 指班機或行程延誤。">
+13. The flight was delayed due to a long ______.
+<label class="option"><input type="radio" name="q13" value="A"> route</label>
+<label class="option"><input type="radio" name="q13" value="B"> delay</label>
+<label class="option"><input type="radio" name="q13" value="C"> demand</label>
+<label class="option"><input type="radio" name="q13" value="D"> profit</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="check in 表示在機場或飯店辦理登記。">
+14. We need to ______ at the airport two hours early.
+<label class="option"><input type="radio" name="q14" value="A"> check in</label>
+<label class="option"><input type="radio" name="q14" value="B"> check out</label>
+<label class="option"><input type="radio" name="q14" value="C"> take off</label>
+<label class="option"><input type="radio" name="q14" value="D"> follow up</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="B" data-explain="luggage 指行李，是不可數名詞。">
+15. Please pick up your ______ at the baggage claim area.
+<label class="option"><input type="radio" name="q15" value="A"> fare</label>
+<label class="option"><input type="radio" name="q15" value="B"> luggage</label>
+<label class="option"><input type="radio" name="q15" value="C"> terminal</label>
+<label class="option"><input type="radio" name="q15" value="D"> passport</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="B" data-explain="on time 表示準時。">
+16. The train arrived ______ this morning.
+<label class="option"><input type="radio" name="q16" value="A"> in charge</label>
+<label class="option"><input type="radio" name="q16" value="B"> on time</label>
+<label class="option"><input type="radio" name="q16" value="C"> at random</label>
+<label class="option"><input type="radio" name="q16" value="D"> by mistake</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="itinerary 指完整行程表。">
+17. He missed the flight because he didn’t check the ______.
+<label class="option"><input type="radio" name="q17" value="A"> itinerary</label>
+<label class="option"><input type="radio" name="q17" value="B"> invoice</label>
+<label class="option"><input type="radio" name="q17" value="C"> strategy</label>
+<label class="option"><input type="radio" name="q17" value="D"> supplier</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="B" data-explain="customs 指海關。">
+18. You must show your passport at ______.
+<label class="option"><input type="radio" name="q18" value="A"> campaign</label>
+<label class="option"><input type="radio" name="q18" value="B"> customs</label>
+<label class="option"><input type="radio" name="q18" value="C"> platform</label>
+<label class="option"><input type="radio" name="q18" value="D"> office</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="B" data-explain="terminal 指航廈。">
+19. The airport shuttle will take you to the ______.
+<label class="option"><input type="radio" name="q19" value="A"> department</label>
+<label class="option"><input type="radio" name="q19" value="B"> terminal</label>
+<label class="option"><input type="radio" name="q19" value="C"> budget</label>
+<label class="option"><input type="radio" name="q19" value="D"> approval</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="ask for directions 表示問路。">
+20. She asked for ______ to find the hotel.
+<label class="option"><input type="radio" name="q20" value="A"> directions</label>
+<label class="option"><input type="radio" name="q20" value="B"> performance</label>
+<label class="option"><input type="radio" name="q20" value="C"> discount</label>
+<label class="option"><input type="radio" name="q20" value="D"> quotation</label>
+<div class="explain"></div>
+</div>
+</div>
+
+<!-- ================= 行銷 ================= -->
+<div class="section">
+<h2>📈 銷售與行銷（10 題）</h2>
+
+<div class="question" data-answer="A" data-explain="launch 指推出新產品。">
+21. The company plans to ______ a new product next month.
+<label class="option"><input type="radio" name="q21" value="A"> launch</label>
+<label class="option"><input type="radio" name="q21" value="B"> attend</label>
+<label class="option"><input type="radio" name="q21" value="C"> transfer</label>
+<label class="option"><input type="radio" name="q21" value="D"> delay</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="B" data-explain="discount 指折扣。">
+22. The store offers a 20% ______ this weekend.
+<label class="option"><input type="radio" name="q22" value="A"> demand</label>
+<label class="option"><input type="radio" name="q22" value="B"> discount</label>
+<label class="option"><input type="radio" name="q22" value="C"> policy</label>
+<label class="option"><input type="radio" name="q22" value="D"> route</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="B" data-explain="campaign 指一整套行銷活動。">
+23. The marketing team ran a successful ______.
+<label class="option"><input type="radio" name="q23" value="A"> itinerary</label>
+<label class="option"><input type="radio" name="q23" value="B"> campaign</label>
+<label class="option"><input type="radio" name="q23" value="C"> terminal</label>
+<label class="option"><input type="radio" name="q23" value="D"> overtime</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="increase sales 是標準商業搭配。">
+24. The goal is to ______ sales during the holiday season.
+<label class="option"><input type="radio" name="q24" value="A"> increase</label>
+<label class="option"><input type="radio" name="q24" value="B"> refund</label>
+<label class="option"><input type="radio" name="q24" value="C"> miss</label>
+<label class="option"><input type="radio" name="q24" value="D"> cancel</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="B" data-explain="consumer 指消費者。">
+25. This brand is popular with young ______.
+<label class="option"><input type="radio" name="q25" value="A"> employees</label>
+<label class="option"><input type="radio" name="q25" value="B"> consumers</label>
+<label class="option"><input type="radio" name="q25" value="C"> supervisors</label>
+<label class="option"><input type="radio" name="q25" value="D"> suppliers</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="brand awareness 指品牌知名度。">
+26. They want to build strong brand ______.
+<label class="option"><input type="radio" name="q26" value="A"> awareness</label>
+<label class="option"><input type="radio" name="q26" value="B"> platform</label>
+<label class="option"><input type="radio" name="q26" value="C"> schedule</label>
+<label class="option"><input type="radio" name="q26" value="D"> fare</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="feedback 指顧客回饋。">
+27. The company received positive customer ______.
+<label class="option"><input type="radio" name="q27" value="A"> feedback</label>
+<label class="option"><input type="radio" name="q27" value="B"> approval</label>
+<label class="option"><input type="radio" name="q27" value="C"> overtime</label>
+<label class="option"><input type="radio" name="q27" value="D"> itinerary</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="meet customer needs 是固定商業用語。">
+28. We must meet customer ______ to stay competitive.
+<label class="option"><input type="radio" name="q28" value="A"> needs</label>
+<label class="option"><input type="radio" name="q28" value="B"> routes</label>
+<label class="option"><input type="radio" name="q28" value="C"> terminals</label>
+<label class="option"><input type="radio" name="q28" value="D"> policies</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="quotation 指報價單。">
+29. The supplier sent a price ______ yesterday.
+<label class="option"><input type="radio" name="q29" value="A"> quotation</label>
+<label class="option"><input type="radio" name="q29" value="B"> schedule</label>
+<label class="option"><input type="radio" name="q29" value="C"> deadline</label>
+<label class="option"><input type="radio" name="q29" value="D"> aisle</label>
+<div class="explain"></div>
+</div>
+
+<div class="question" data-answer="A" data-explain="profit 指利潤，是商業核心概念。">
+30. Good customer service helps increase ______.
+<label class="option"><input type="radio" name="q30" value="A"> profit</label>
+<label class="option"><input type="radio" name="q30" value="B"> luggage</label>
+<label class="option"><input type="radio" name="q30" value="C"> delay</label>
+<label class="option"><input type="radio" name="q30" value="D"> customs</label>
+<div class="explain"></div>
+</div>
+</div>
+
+<button type="button" onclick="submitQuiz()">送出測驗</button>
+</form>
+
+<div class="result" id="result">
+<h2>📊 測驗結果</h2>
+<div class="score" id="totalScore"></div>
+<div class="score" id="officeScore"></div>
+<div class="score" id="travelScore"></div>
+<div class="score" id="salesScore"></div>
+</div>
+
+</div>
+
+<script>
+function submitQuiz(){
+  const questions=document.querySelectorAll(".question");
+  let total=0,office=0,travel=0,sales=0;
+
+  questions.forEach((q,i)=>{
+    const correct=q.dataset.answer;
+    const explain=q.dataset.explain;
+    const checked=q.querySelector("input:checked");
+    const box=q.querySelector(".explain");
+
+    if(checked && checked.value===correct){
+      total++;
+      if(i<10) office++; else if(i<20) travel++; else sales++;
+      box.innerHTML="✔ 正確答案："+correct+"<br>"+explain;
+      box.className="explain correct";
+    }else{
+      box.innerHTML="✘ 正確答案："+correct+"<br>"+explain;
+      box.className="explain wrong";
+    }
+    box.style.display="block";
+  });
+
+  document.getElementById("result").style.display="block";
+  document.getElementById("totalScore").innerText=`總分：${total} / 30`;
+  document.getElementById("officeScore").innerText=`職場：${office} / 10`;
+  document.getElementById("travelScore").innerText=`旅遊：${travel} / 10`;
+  document.getElementById("salesScore").innerText=`行銷：${sales} / 10`;
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>TOEIC 550 綜合前測</title>
+
+<style>
+body{
+  font-family:"Noto Sans TC", Arial, sans-serif;
+  background:#f7f5f2;
+  color:#444;
+  padding:20px;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+h1{text-align:center;}
+.part{
+  margin-top:40px;
+}
+.part h2{
+  border-left:6px solid #c8c2bd;
+  padding-left:12px;
+}
+.article{
+  background:#f0f4f3;
+  padding:20px;
+  border-radius:12px;
+  line-height:1.8;
+}
+.question{
+  margin-top:20px;
+  padding:15px;
+  background:#fafafa;
+  border-radius:10px;
+}
+.option{
+  display:block;
+  margin:6px 0;
+}
+.result{
+  margin-top:20px;
+  font-weight:bold;
+}
+button{
+  display:block;
+  margin:40px auto 0;
+  padding:14px 40px;
+  background:#c4b7a6;
+  color:white;
+  border:none;
+  border-radius:10px;
+  font-size:18px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>TOEIC 550 綜合前測（25 題）</h1>
+
+<!-- Part 1 Reading -->
+<div class="part">
+<h2>Part 1｜閱讀理解（5 題）</h2>
+
+<div class="article">
+Global Travel Services has recently introduced a new package aimed at corporate clients seeking to arrange business trips. The package offers a wide range of benefits, including discounted flight rates, priority booking, and personalized travel itineraries. The company believes that the new service will help improve employee productivity by ensuring that all travel arrangements are handled efficiently. Additionally, clients will have access to 24/7 customer support, which ensures that any issues encountered during the trip can be addressed promptly. The package is designed for organizations looking to streamline their business travel processes, allowing employees to focus on their core responsibilities.
+</div>
+
+<div id="reading"></div>
+</div>
+
+<!-- Part 2 Grammar -->
+<div class="part">
+<h2>Part 2｜文法測驗（10 題）</h2>
+<div id="grammar"></div>
+</div>
+
+<!-- Part 3 Vocabulary -->
+<div class="part">
+<h2>Part 3｜字彙測驗（10 題）</h2>
+<div id="vocab"></div>
+</div>
+
+<button onclick="submitTest()">送出答案</button>
+<div id="score" class="result"></div>
+</div>
+
+<script>
+// ---------- Reading (固定 5 題) ----------
+const readingQuestions = [
+ {q:"1. What is the main purpose of the new travel package?",
+  options:["Leisure travel","Employee productivity","Family vacations","Free itineraries"], answer:1},
+ {q:"2. What booking benefit is included?",
+  options:["Free upgrades","Priority booking","Refund guarantee","Seat selection"], answer:1},
+ {q:"3. What does the company believe the service will improve?",
+  options:["Costs","Hotel quality","Productivity","Destinations"], answer:2},
+ {q:"4. What support is available?",
+  options:["Travel insurance","24/7 customer support","Free meals","Consultants"], answer:1},
+ {q:"5. Who is the target audience?",
+  options:["Tourists","Families","Corporate clients","Students"], answer:2}
+];
+
+// ---------- Grammar Pool ----------
+const grammarPool = [
+ {q:"Sales increased ___ 20%.", options:["by","at","to","with"], answer:0},
+ {q:"We stayed there ___ three nights.", options:["since","for","during","from"], answer:1},
+ {q:"Please arrive ___ the airport early.", options:["at","in","on","to"], answer:0},
+ {q:"The report must be ___ today.", options:["submit","submitted","submitting","submits"], answer:1},
+ {q:"She is responsible ___ the project.", options:["for","to","with","of"], answer:0},
+ {q:"The flight was canceled ___ bad weather.", options:["because","because of","although","during"], answer:1},
+ {q:"This product is ___ than before.", options:["expensive","more expensive","most expensive","expensively"], answer:1},
+ {q:"He plans ___ a new branch.", options:["open","to open","opening","opened"], answer:1},
+ {q:"The email was ___ yesterday.", options:["send","sent","sending","sends"], answer:1},
+ {q:"Please let me know ___ you agree.", options:["that","if","what","which"], answer:1},
+];
+
+// ---------- Vocabulary Pool ----------
+const vocabPool = [
+ {q:"Please ___ the report before Friday.", options:["submit","cancel","print","move"], answer:0},
+ {q:"The hotel confirmed my ___.", options:["luggage","passport","reservation","ticket"], answer:2},
+ {q:"Customers joined the loyalty ___.", options:["campaign","program","discount","catalog"], answer:1},
+ {q:"Don’t forget your boarding ___.", options:["ticket","gate","pass","desk"], answer:2},
+ {q:"The marketing ___ was successful.", options:["campaign","policy","schedule","invoice"], answer:0},
+ {q:"Please check the train ___.", options:["passport","timetable","insurance","counter"], answer:1},
+ {q:"The manager approved the ___.", options:["budget","luggage","flight","destination"], answer:0},
+ {q:"The product launch needs a ___.", options:["promotion","assistant","conference","policy"], answer:0},
+ {q:"Our office will ___ next month.", options:["relocate","deliver","attach","print"], answer:0},
+ {q:"The company posted an online ___.", options:["advertisement","policy","insurance","schedule"], answer:0},
+];
+
+// ---------- Render ----------
+function render(id, questions, prefix){
+ const box=document.getElementById(id);
+ questions.forEach((q,i)=>{
+  let html=`<div class="question"><p>${q.q}</p>`;
+  q.options.forEach((opt,j)=>{
+   html+=`<label class="option">
+   <input type="radio" name="${prefix}${i}" value="${j}"> ${opt}</label>`;
+  });
+  html+=`</div>`;
+  box.innerHTML+=html;
+ });
+}
+
+function shuffle(arr){
+ return arr.sort(()=>0.5-Math.random());
+}
+
+// 固定閱讀
+render("reading", readingQuestions, "r");
+
+// 隨機文法、單字
+const grammarQ = shuffle(grammarPool).slice(0,10);
+const vocabQ = shuffle(vocabPool).slice(0,10);
+
+render("grammar", grammarQ, "g");
+render("vocab", vocabQ, "v");
+
+// ---------- Score ----------
+function submitTest(){
+ let r=0,g=0,v=0;
+
+ readingQuestions.forEach((q,i)=>{
+  const a=document.querySelector(`input[name=r${i}]:checked`);
+  if(a && +a.value===q.answer) r++;
+ });
+ grammarQ.forEach((q,i)=>{
+  const a=document.querySelector(`input[name=g${i}]:checked`);
+  if(a && +a.value===q.answer) g++;
+ });
+ vocabQ.forEach((q,i)=>{
+  const a=document.querySelector(`input[name=v${i}]:checked`);
+  if(a && +a.value===q.answer) v++;
+ });
+
+ document.getElementById("score").innerHTML=
+ `📊 成績結果<br>
+ 閱讀：${r}/5<br>
+ 文法：${g}/10<br>
+ 單字：${v}/10<br>
+ <b>總分：${r+g+v}/25</b>`;
+}
+</script>
+</body>
+</html>
+
+
+
+

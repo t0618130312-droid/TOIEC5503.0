@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>銷售與行銷文法測驗｜TOEIC 550</title>
+
+<style>
+body{
+  font-family:"Noto Sans TC", sans-serif;
+  background:#f7f5f2;
+  padding:20px;
+  color:#444;
+}
+.container{
+  max-width:850px;
+  margin:auto;
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+}
+.question{
+  margin-bottom:25px;
+  padding:15px;
+  background:#fafafa;
+  border-left:5px solid #c8c2bd;
+}
+.option{
+  margin:6px 0;
+  display:block;
+}
+.answer-block{
+  margin-top:8px;
+  padding:10px;
+  background:#f0edea;
+  border-radius:8px;
+  display:none;
+}
+.correct-text{
+  color:#3c7a3c;
+  font-weight:bold;
+}
+.score{
+  text-align:center;
+  font-size:20px;
+  margin-top:20px;
+  display:none;
+}
+button{
+  display:block;
+  margin:30px auto;
+  padding:12px 30px;
+  background:#c4b7a6;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+button:hover{
+  background:#b5a492;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>📈 TOEIC 550 銷售與行銷英文【文法】測驗（10 題）</h2>
+
+<form id="quizForm"></form>
+
+<button type="button" onclick="checkAnswers()">送出答案</button>
+
+<div class="score" id="scoreBox"></div>
+</div>
+
+<script>
+const questions = [
+{
+ q:"1. This product is _____ than the previous model.",
+ options:["more expensive","most expensive","expensive","expensively"],
+ answer:"more expensive",
+ explain:"than 前面必須使用比較級"
+},
+{
+ q:"2. The company plans _____ a new product next month.",
+ options:["launch","to launch","launching","launched"],
+ answer:"to launch",
+ explain:"plan to + 原形動詞"
+},
+{
+ q:"3. The advertisement was _____ by the marketing team.",
+ options:["create","creating","created","creates"],
+ answer:"created",
+ explain:"被動語態：be + 過去分詞"
+},
+{
+ q:"4. Customers are interested _____ the special offer.",
+ options:["in","on","at","for"],
+ answer:"in",
+ explain:"be interested in 為固定用法"
+},
+{
+ q:"5. This store offers _____ prices during the sale.",
+ options:["reduce","reducing","reduced","reduces"],
+ answer:"reduced",
+ explain:"reduced prices 為形容詞用法"
+},
+{
+ q:"6. The campaign _____ last week was very successful.",
+ options:["launch","launched","launching","launches"],
+ answer:"launched",
+ explain:"過去分詞作形容詞，修飾名詞 campaign"
+},
+{
+ q:"7. The company provides free delivery _____ online orders.",
+ options:["for","to","with","at"],
+ answer:"for",
+ explain:"provide A for B 為固定句型"
+},
+{
+ q:"8. This advertisement is designed _____ young customers.",
+ options:["at","for","to","with"],
+ answer:"for",
+ explain:"be designed for + 對象"
+},
+{
+ q:"9. Sales have increased _____ 20% this year.",
+ options:["by","at","to","with"],
+ answer:"by",
+ explain:"increase by + 數字 / 幅度"
+},
+{
+ q:"10. The product was advertised _____ television.",
+ options:["on","in","at","by"],
+ answer:"on",
+ explain:"on television 為固定用法"
+}
+];
+
+const form = document.getElementById("quizForm");
+
+questions.forEach((q,i)=>{
+  let html = `<div class="question"><p><b>${q.q}</b></p>`;
+  q.options.forEach(opt=>{
+    html += `
+      <label class="option">
+        <input type="radio" name="q${i}" value="${opt}"> ${opt}
+      </label>`;
+  });
+  html += `
+    <div class="answer-block" id="ans${i}">
+      <p>正確答案：<span class="correct-text">${q.answer}</span></p>
+      <p>文法解析：${q.explain}</p>
+    </div>
+  </div>`;
+  form.innerHTML += html;
+});
+
+function checkAnswers(){
+  let score = 0;
+  questions.forEach((q,i)=>{
+    const selected = document.querySelector(`input[name="q${i}"]:checked`);
+    if(selected && selected.value === q.answer){
+      score++;
+    }
+    document.getElementById("ans"+i).style.display = "block";
+  });
+  const scoreBox = document.getElementById("scoreBox");
+  scoreBox.style.display = "block";
+  scoreBox.innerHTML = `🎯 你的分數：${score} / ${questions.length}`;
+}
+</script>
+
+</body>
+</html>

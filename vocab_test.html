@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>TOEIC 550 單字測驗（30 題）</title>
+
+<style>
+body{
+    font-family:"Noto Sans TC",sans-serif;
+    background:#f7f5f2;
+    color:#444;
+    padding:20px;
+}
+.container{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+h1,h2{
+    text-align:center;
+    color:#555;
+}
+.section{
+    margin-top:30px;
+}
+.question{
+    margin:18px 0;
+    padding:15px;
+    background:#fafafa;
+    border-left:5px solid #c8c2bd;
+    border-radius:8px;
+}
+.option{
+    display:block;
+    margin:6px 0;
+}
+button{
+    display:block;
+    margin:30px auto;
+    padding:14px 40px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:#6b6b6b;
+    color:#fff;
+    cursor:pointer;
+}
+button:hover{
+    background:#555;
+}
+.result{
+    margin-top:30px;
+    padding:20px;
+    background:#eef2f1;
+    border-radius:12px;
+    display:none;
+}
+.score{
+    font-size:18px;
+    margin:8px 0;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📝 TOEIC 550 單字能力測驗</h1>
+<p style="text-align:center">共 30 題，請作答後點擊「送出測驗」</p>
+
+<form id="quiz">
+
+<!-- ================= 職場 ================= -->
+<div class="section">
+<h2>💼 職場字彙（10 題）</h2>
+
+<div class="question">
+1. The manager ______ a meeting for tomorrow morning.
+<label class="option"><input type="radio" name="q1" value="A"> A. schedule</label>
+<label class="option"><input type="radio" name="q1" value="B"> B. deliver</label>
+<label class="option"><input type="radio" name="q1" value="C"> C. clean</label>
+<label class="option"><input type="radio" name="q1" value="D"> D. cancel</label>
+</div>
+
+<div class="question">
+2. We must finish the report before the ______.
+<label class="option"><input type="radio" name="q2" value="A"> A. schedule</label>
+<label class="option"><input type="radio" name="q2" value="B"> B. deadline</label>
+<label class="option"><input type="radio" name="q2" value="C"> C. policy</label>
+<label class="option"><input type="radio" name="q2" value="D"> D. budget</label>
+</div>
+
+<div class="question">
+3. Please ______ your report before 5 p.m.
+<label class="option"><input type="radio" name="q3" value="A"> A. submit</label>
+<label class="option"><input type="radio" name="q3" value="B"> B. print</label>
+<label class="option"><input type="radio" name="q3" value="C"> C. call</label>
+<label class="option"><input type="radio" name="q3" value="D"> D. fix</label>
+</div>
+
+<div class="question">
+4. The HR ______ is responsible for hiring new staff.
+<label class="option"><input type="radio" name="q4" value="A"> A. terminal</label>
+<label class="option"><input type="radio" name="q4" value="B"> B. department</label>
+<label class="option"><input type="radio" name="q4" value="C"> C. platform</label>
+<label class="option"><input type="radio" name="q4" value="D"> D. campaign</label>
+</div>
+
+<div class="question">
+5. All employees must ______ their ID badges.
+<label class="option"><input type="radio" name="q5" value="A"> A. wear</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. move</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. open</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. type</label>
+</div>
+
+<div class="question">
+6. Employees must follow company ______ at all times.
+<label class="option"><input type="radio" name="q6" value="A"> A. contract</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. policy</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. schedule</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. performance</label>
+</div>
+
+<div class="question">
+7. The staff prepared the ______ room.
+<label class="option"><input type="radio" name="q7" value="A"> A. conference</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. envelope</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. computer</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. supervisor</label>
+</div>
+
+<div class="question">
+8. She is ______ managing the sales team.
+<label class="option"><input type="radio" name="q8" value="A"> A. in charge of</label>
+<label class="option"><input type="radio" name="q8" value="B"> B. check in</label>
+<label class="option"><input type="radio" name="q8" value="C"> C. make a reservation</label>
+<label class="option"><input type="radio" name="q8" value="D"> D. arrive on time</label>
+</div>
+
+<div class="question">
+9. Please read the ______ carefully before signing.
+<label class="option"><input type="radio" name="q9" value="A"> A. contract</label>
+<label class="option"><input type="radio" name="q9" value="B"> B. luggage</label>
+<label class="option"><input type="radio" name="q9" value="C"> C. shuttle</label>
+<label class="option"><input type="radio" name="q9" value="D"> D. aisle</label>
+</div>
+
+<div class="question">
+10. We need to ______ the employee database.
+<label class="option"><input type="radio" name="q10" value="A"> A. update</label>
+<label class="option"><input type="radio" name="q10" value="B"> B. deliver</label>
+<label class="option"><input type="radio" name="q10" value="C"> C. borrow</label>
+<label class="option"><input type="radio" name="q10" value="D"> D. remind</label>
+</div>
+</div>
+
+<!-- ================= 旅遊 ================= -->
+<div class="section">
+<h2>✈️ 旅遊與交通（10 題）</h2>
+
+<!-- q11–q20 -->
+<div class="question">
+11. Please check your ______ at the counter before departure.
+<label class="option"><input type="radio" name="q11" value="A"> A. luggage</label>
+<label class="option"><input type="radio" name="q11" value="B"> B. passport</label>
+<label class="option"><input type="radio" name="q11" value="C"> C. ticket</label>
+<label class="option"><input type="radio" name="q11" value="D"> D. insurance</label>
+</div>
+
+<div class="question">
+12. I made a hotel ______ online.
+<label class="option"><input type="radio" name="q12" value="A"> A. reservation</label>
+<label class="option"><input type="radio" name="q12" value="B"> B. campaign</label>
+<label class="option"><input type="radio" name="q12" value="C"> C. budget</label>
+<label class="option"><input type="radio" name="q12" value="D"> D. approval</label>
+</div>
+
+<div class="question">
+13. The ______ shows the flight departure and arrival times.
+<label class="option"><input type="radio" name="q13" value="A"> A. schedule</label>
+<label class="option"><input type="radio" name="q13" value="B"> B. boarding pass</label>
+<label class="option"><input type="radio" name="q13" value="C"> C. destination</label>
+<label class="option"><input type="radio" name="q13" value="D"> D. reservation</label>
+</div>
+
+<div class="question">
+14. Don’t forget your ______ when boarding the plane.
+<label class="option"><input type="radio" name="q14" value="A"> A. boarding pass</label>
+<label class="option"><input type="radio" name="q14" value="B"> B. destination</label>
+<label class="option"><input type="radio" name="q14" value="C"> C. insurance</label>
+<label class="option"><input type="radio" name="q14" value="D"> D. flight</label>
+</div>
+
+<div class="question">
+15. We need to ______ at the airport two hours early.
+<label class="option"><input type="radio" name="q15" value="A"> A. check in</label>
+<label class="option"><input type="radio" name="q15" value="B"> B. check out</label>
+<label class="option"><input type="radio" name="q15" value="C"> C. take off</label>
+<label class="option"><input type="radio" name="q15" value="D"> D. follow up</label>
+</div>
+
+<div class="question">
+16. The taxi driver asked about my ______.
+<label class="option"><input type="radio" name="q16" value="A"> A. destination</label>
+<label class="option"><input type="radio" name="q16" value="B"> B. ticket</label>
+<label class="option"><input type="radio" name="q16" value="C"> C. luggage</label>
+<label class="option"><input type="radio" name="q16" value="D"> D. passport</label>
+</div>
+
+<div class="question">
+17. You must show your passport at ______.
+<label class="option"><input type="radio" name="q17" value="A"> A. the campaign</label>
+<label class="option"><input type="radio" name="q17" value="B"> B. customs</label>
+<label class="option"><input type="radio" name="q17" value="C"> C. the platform</label>
+<label class="option"><input type="radio" name="q17" value="D"> D. the office</label>
+</div>
+
+<div class="question">
+18. The airport shuttle will take you to the ______.
+<label class="option"><input type="radio" name="q18" value="A"> A. department</label>
+<label class="option"><input type="radio" name="q18" value="B"> B. terminal</label>
+<label class="option"><input type="radio" name="q18" value="C"> C. budget</label>
+<label class="option"><input type="radio" name="q18" value="D"> D. approval</label>
+</div>
+
+<div class="question">
+19. You should check the ______ to avoid missing your train.
+<label class="option"><input type="radio" name="q19" value="A"> A. timetable</label>
+<label class="option"><input type="radio" name="q19" value="B"> B. luggage</label>
+<label class="option"><input type="radio" name="q19" value="C"> C. passport</label>
+<label class="option"><input type="radio" name="q19" value="D"> D. ticket</label>
+</div>
+
+<div class="question">
+20. Please pick up your ______ at the baggage claim area.
+<label class="option"><input type="radio" name="q20" value="A"> A. fare</label>
+<label class="option"><input type="radio" name="q20" value="B"> B. luggage</label>
+<label class="option"><input type="radio" name="q20" value="C"> C. terminal</label>
+<label class="option"><input type="radio" name="q20" value="D"> D. passport</label>
+</div>
+</div>
+
+<!-- ================= 銷售 ================= -->
+<div class="section">
+<h2>📊 銷售與行銷（10 題）</h2>
+
+<div class="question">
+21. The company plans to ______ a new product next month.
+<label class="option"><input type="radio" name="q21" value="A"> A. launch</label>
+<label class="option"><input type="radio" name="q21" value="B"> B. attend</label>
+<label class="option"><input type="radio" name="q21" value="C"> C. transfer</label>
+<label class="option"><input type="radio" name="q21" value="D"> D. delay</label>
+</div>
+
+<div class="question">
+22. The store offers a 20% ______ this weekend.
+<label class="option"><input type="radio" name="q22" value="A"> A. demand</label>
+<label class="option"><input type="radio" name="q22" value="B"> B. discount</label>
+<label class="option"><input type="radio" name="q22" value="C"> C. policy</label>
+<label class="option"><input type="radio" name="q22" value="D"> D. route</label>
+</div>
+
+<div class="question">
+23. The marketing team ran a successful ______.
+<label class="option"><input type="radio" name="q23" value="A"> A. itinerary</label>
+<label class="option"><input type="radio" name="q23" value="B"> B. campaign</label>
+<label class="option"><input type="radio" name="q23" value="C"> C. terminal</label>
+<label class="option"><input type="radio" name="q23" value="D"> D. overtime</label>
+</div>
+
+<div class="question">
+24. The goal is to ______ sales during the holiday season.
+<label class="option"><input type="radio" name="q24" value="A"> A. increase</label>
+<label class="option"><input type="radio" name="q24" value="B"> B. refund</label>
+<label class="option"><input type="radio" name="q24" value="C"> C. miss</label>
+<label class="option"><input type="radio" name="q24" value="D"> D. cancel</label>
+</div>
+
+<div class="question">
+25. This brand is popular with young ______.
+<label class="option"><input type="radio" name="q25" value="A"> A. employees</label>
+<label class="option"><input type="radio" name="q25" value="B"> B. consumers</label>
+<label class="option"><input type="radio" name="q25" value="C"> C. supervisors</label>
+<label class="option"><input type="radio" name="q25" value="D"> D. suppliers</label>
+</div>
+
+<div class="question">
+26. They want to build strong brand ______.
+<label class="option"><input type="radio" name="q26" value="A"> A. awareness</label>
+<label class="option"><input type="radio" name="q26" value="B"> B. platform</label>
+<label class="option"><input type="radio" name="q26" value="C"> C. schedule</label>
+<label class="option"><input type="radio" name="q26" value="D"> D. fare</label>
+</div>
+
+<div class="question">
+27. The company received positive customer ______.
+<label class="option"><input type="radio" name="q27" value="A"> A. feedback</label>
+<label class="option"><input type="radio" name="q27" value="B"> B. approval</label>
+<label class="option"><input type="radio" name="q27" value="C"> C. overtime</label>
+<label class="option"><input type="radio" name="q27" value="D"> D. itinerary</label>
+</div>
+
+<div class="question">
+28. We must meet customer ______ to stay competitive.
+<label class="option"><input type="radio" name="q28" value="A"> A. needs</label>
+<label class="option"><input type="radio" name="q28" value="B"> B. routes</label>
+<label class="option"><input type="radio" name="q28" value="C"> C. terminals</label>
+<label class="option"><input type="radio" name="q28" value="D"> D. policies</label>
+</div>
+
+<div class="question">
+29. The supplier sent a price ______ yesterday.
+<label class="option"><input type="radio" name="q29" value="A"> A. quotation</label>
+<label class="option"><input type="radio" name="q29" value="B"> B. schedule</label>
+<label class="option"><input type="radio" name="q29" value="C"> C. deadline</label>
+<label class="option"><input type="radio" name="q29" value="D"> D. aisle</label>
+</div>
+
+<div class="question">
+30. Good customer service helps increase ______.
+<label class="option"><input type="radio" name="q30" value="A"> A. profit</label>
+<label class="option"><input type="radio" name="q30" value="B"> B. luggage</label>
+<label class="option"><input type="radio" name="q30" value="C"> C. delay</label>
+<label class="option"><input type="radio" name="q30" value="D"> D. customs</label>
+</div>
+</div>
+
+<button type="button" onclick="grade()">送出測驗</button>
+
+<div class="result" id="result">
+<div class="score" id="officeScore"></div>
+<div class="score" id="travelScore"></div>
+<div class="score" id="salesScore"></div>
+<hr>
+<div class="score" id="totalScore"></div>
+</div>
+
+</form>
+</div>
+
+<script>
+const answers = {
+1:"A",2:"B",3:"A",4:"B",5:"A",6:"B",7:"A",8:"A",9:"A",10:"A",
+11:"A",12:"A",13:"A",14:"A",15:"A",16:"A",17:"B",18:"B",19:"A",20:"B",
+21:"A",22:"B",23:"B",24:"A",25:"B",26:"A",27:"A",28:"A",29:"A",30:"A"
+};
+
+function grade(){
+let office=0, travel=0, sales=0;
+
+for(let i=1;i<=30;i++){
+    const q = document.querySelector(`input[name="q${i}"]:checked`);
+    if(q && q.value===answers[i]){
+        if(i<=10) office++;
+        else if(i<=20) travel++;
+        else sales++;
+    }
+}
+
+document.getElementById("officeScore").innerText = `💼 職場字彙：${office} / 10`;
+document.getElementById("travelScore").innerText = `✈️ 旅遊交通：${travel} / 10`;
+document.getElementById("salesScore").innerText = `📊 銷售行銷：${sales} / 10`;
+document.getElementById("totalScore").innerText = `🎯 總分：${office+travel+sales} / 30`;
+
+document.getElementById("result").style.display="block";
+}
+</script>
+
+</body>
+</html>

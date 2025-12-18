@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>TOEIC 550｜Reading 閱讀測驗（30 題）</title>
+<style>
+  body{
+    font-family: Arial, "Noto Sans TC", sans-serif;
+    background:#f2f4f7;
+    margin:0;
+    padding:20px;
+    color:#222;
+  }
+  .container{
+    max-width: 1050px;
+    margin: 0 auto;
+    background:#fff;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  }
+  h1{
+    margin: 0 0 14px;
+    text-align:center;
+    color:#0d2a4a;
+  }
+  .hint{
+    text-align:center;
+    color:#555;
+    margin-bottom: 18px;
+  }
+  .topic{
+    margin-top: 28px;
+    padding: 14px;
+    border-radius: 12px;
+    background:#0d47a1;
+    color:#fff;
+  }
+  .sub{
+    margin: 18px 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    color:#0d2a4a;
+  }
+  .article{
+    background:#f9fbff;
+    border-left: 6px solid #1e88e5;
+    padding: 14px 16px;
+    border-radius: 10px;
+    line-height: 1.65;
+  }
+  .q{
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background:#fafafa;
+    border: 1px solid #eee;
+  }
+  .q p{
+    margin: 0 0 10px;
+    font-weight: 700;
+  }
+  .opt{
+    display:block;
+    margin: 6px 0;
+    cursor:pointer;
+  }
+  .answer{
+    display:none;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background:#eef7ee;
+    border: 1px solid #cfe7cf;
+  }
+  .answer .k{
+    font-weight: 800;
+    color:#1b5e20;
+  }
+  .answer .exp{
+    margin-top:6px;
+    color:#244b24;
+  }
+
+  .controls{
+    margin: 22px 0 6px;
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap: wrap;
+  }
+  button{
+    padding: 12px 18px;
+    border:none;
+    border-radius: 10px;
+    cursor:pointer;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  #btnScore{ background:#1e88e5; color:#fff; }
+  #btnReset{ background:#e0e0e0; color:#111; }
+
+  .score{
+    margin-top: 14px;
+    text-align:center;
+    font-size: 20px;
+    font-weight: 800;
+    color:#0d2a4a;
+  }
+  .small{
+    text-align:center;
+    color:#666;
+    margin-top:6px;
+    font-size: 13px;
+  }
+  hr{
+    border:none;
+    border-top: 1px dashed #d7d7d7;
+    margin: 18px 0;
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>TOEIC 550｜Reading 閱讀測驗（30 題）</h1>
+  <div class="hint">作答時不顯示答案；最後按一次「查看成績」才會計分並顯示正確答案與解析。</div>
+
+  <!-- ========================= 主題 1 ========================= -->
+  <div class="topic"><b>主題 1｜職場辦公室 Office</b></div>
+
+  <div class="sub">閱讀理解 - 1｜文章 1</div>
+  <div class="article">
+    <p>In today's office environment, effective communication is more important than ever. Companies are placing greater emphasis on collaboration and teamwork, and this requires clear and efficient communication between colleagues. Many offices are adopting open-plan layouts to encourage interaction and the exchange of ideas.</p>
+
+    <p>However, open-plan offices have their challenges. While they may promote teamwork, they can also lead to distractions. For example, conversations between coworkers, the noise from phones, and the constant movement of employees can interrupt concentration. To mitigate these challenges, companies are now introducing designated quiet zones or soundproof booths for employees who need to focus on tasks that require deep concentration.</p>
+
+    <p>Another challenge is the rise of remote work. As technology improves, employees are increasingly able to work from home or other locations. While this provides flexibility, it also means that communication can become more fragmented. Without face-to-face interactions, employees may feel isolated, and it may be harder to collaborate effectively.</p>
+
+    <p>Despite these challenges, most companies are working hard to create a balanced and productive office environment. Offering flexible working hours, encouraging virtual meetings, and fostering a culture of openness and transparency are some of the strategies that companies use to improve workplace communication and productivity.</p>
+  </div>
+
+  <!-- Q1-5 -->
+  <div class="q" data-q="q1" data-ans="a">
+    <p>問題 1: According to the article, what is one benefit of open-plan offices?</p>
+    <label class="opt"><input type="radio" name="q1" value="a"> They encourage face-to-face interactions.</label>
+    <label class="opt"><input type="radio" name="q1" value="b"> They provide employees with more privacy.</label>
+    <label class="opt"><input type="radio" name="q1" value="c"> They reduce the need for communication.</label>
+    <label class="opt"><input type="radio" name="q1" value="d"> They are cheaper to design and build.</label>
+    <div class="answer" id="a_q1">
+      <div class="k">✔ 正確答案：A</div>
+      <div class="exp">解析：文章提到 open-plan layouts 用來「encourage interaction and the exchange of ideas」。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q2" data-ans="a">
+    <p>問題 2: What is one challenge of remote work mentioned in the article?</p>
+    <label class="opt"><input type="radio" name="q2" value="a"> Employees may feel isolated without face-to-face interactions.</label>
+    <label class="opt"><input type="radio" name="q2" value="b"> Remote work increases employee turnover.</label>
+    <label class="opt"><input type="radio" name="q2" value="c"> Remote work leads to more distractions.</label>
+    <label class="opt"><input type="radio" name="q2" value="d"> Remote work reduces communication efficiency.</label>
+    <div class="answer" id="a_q2">
+      <div class="k">✔ 正確答案：A</div>
+      <div class="exp">解析：文章明說 Without face-to-face interactions, employees may feel isolated。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q3" data-ans="b">
+    <p>問題 3: What is one strategy companies are using to address the challenges of open-plan offices?</p>
+    <label class="opt"><input type="radio" name="q3" value="a"> Offering remote work opportunities.</label>
+    <label class="opt"><input type="radio" name="q3" value="b"> Creating designated quiet zones.</label>
+    <label class="opt"><input type="radio" name="q3" value="c"> Encouraging more meetings.</label>
+    <label class="opt"><input type="radio" name="q3" value="d"> Reducing office space.</label>
+    <div class="answer" id="a_q3">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：文章提到為減少干擾，companies introduce designated quiet zones / soundproof booths。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q4" data-ans="b">
+    <p>問題 4: What is a disadvantage of open-plan offices mentioned in the article?</p>
+    <label class="opt"><input type="radio" name="q4" value="a"> They encourage individual work.</label>
+    <label class="opt"><input type="radio" name="q4" value="b"> They can lead to distractions and loss of concentration.</label>
+    <label class="opt"><input type="radio" name="q4" value="c"> They decrease communication between coworkers.</label>
+    <label class="opt"><input type="radio" name="q4" value="d"> They make the work environment more stressful.</label>
+    <div class="answer" id="a_q4">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：文章舉例 conversations、phones、movement 會 interrupt concentration。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q5" data-ans="b">
+    <p>問題 5: What is a challenge mentioned for companies that offer remote work?</p>
+    <label class="opt"><input type="radio" name="q5" value="a"> Lack of productivity in employees.</label>
+    <label class="opt"><input type="radio" name="q5" value="b"> Employees may feel isolated and find it harder to collaborate.</label>
+    <label class="opt"><input type="radio" name="q5" value="c"> Increased cost of technology.</label>
+    <label class="opt"><input type="radio" name="q5" value="d"> Employees do not want to work from home.</label>
+    <div class="answer" id="a_q5">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：文章指出 employees may feel isolated，且 harder to collaborate effectively。</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sub">閱讀理解 - 2｜文章 2</div>
+  <div class="article">
+    <p>In the modern workplace, employees are increasingly being asked to work in teams. Teamwork is essential for completing complex tasks that require multiple skills and perspectives. However, not all employees thrive in team environments. Some may prefer to work independently and struggle with group dynamics.</p>
+
+    <p>To improve teamwork, companies are focusing on building strong team cultures. This includes activities that foster trust, cooperation, and open communication. Team-building exercises such as brainstorming sessions, collaborative projects, and team outings are common in many organizations.</p>
+
+    <p>One key factor in successful teamwork is the ability to resolve conflicts. In any group, disagreements are inevitable. Effective communication and conflict resolution skills are essential to ensure that conflicts do not hinder the team's progress. Companies are encouraging employees to develop these skills through training and mentorship programs.</p>
+
+    <p>Ultimately, effective teamwork not only enhances productivity but also creates a positive work environment where employees feel valued and motivated. Companies that prioritize teamwork are often more successful in achieving their goals and retaining top talent.</p>
+  </div>
+
+  <!-- Q6-10 -->
+  <div class="q" data-q="q6" data-ans="b">
+    <p>問題 6: Why is teamwork important in the workplace?</p>
+    <label class="opt"><input type="radio" name="q6" value="a"> It allows employees to work independently.</label>
+    <label class="opt"><input type="radio" name="q6" value="b"> It helps complete tasks that require multiple skills and perspectives.</label>
+    <label class="opt"><input type="radio" name="q6" value="c"> It reduces employee collaboration.</label>
+    <label class="opt"><input type="radio" name="q6" value="d"> It creates competition between employees.</label>
+    <div class="answer" id="a_q6">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：文章第一段明說 teamwork essential for tasks requiring multiple skills and perspectives。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q7" data-ans="b">
+    <p>問題 7: What is one way companies are improving teamwork?</p>
+    <label class="opt"><input type="radio" name="q7" value="a"> By promoting individual work.</label>
+    <label class="opt"><input type="radio" name="q7" value="b"> By organizing team-building exercises.</label>
+    <label class="opt"><input type="radio" name="q7" value="c"> By reducing the number of meetings.</label>
+    <label class="opt"><input type="radio" name="q7" value="d"> By encouraging competition between teams.</label>
+    <div class="answer" id="a_q7">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：第二段列出 brainstorming、collaborative projects、team outings 等 team-building exercises。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q8" data-ans="a">
+    <p>問題 8: According to the article, what is important for successful teamwork?</p>
+    <label class="opt"><input type="radio" name="q8" value="a"> Communication and conflict resolution skills.</label>
+    <label class="opt"><input type="radio" name="q8" value="b"> Allowing employees to work alone.</label>
+    <label class="opt"><input type="radio" name="q8" value="c"> Strict supervision from managers.</label>
+    <label class="opt"><input type="radio" name="q8" value="d"> Limiting team meetings.</label>
+    <div class="answer" id="a_q8">
+      <div class="k">✔ 正確答案：A</div>
+      <div class="exp">解析：第三段：Effective communication and conflict resolution skills are essential。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q9" data-ans="b">
+    <p>問題 9: How do companies handle conflicts in teams?</p>
+    <label class="opt"><input type="radio" name="q9" value="a"> By allowing conflicts to resolve naturally.</label>
+    <label class="opt"><input type="radio" name="q9" value="b"> By providing training and mentorship programs.</label>
+    <label class="opt"><input type="radio" name="q9" value="c"> By assigning blame to one person.</label>
+    <label class="opt"><input type="radio" name="q9" value="d"> By removing employees from the team.</label>
+    <div class="answer" id="a_q9">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：第三段說 companies encourage these skills through training and mentorship programs。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q10" data-ans="b">
+    <p>問題 10: What is one outcome of effective teamwork, according to the article?</p>
+    <label class="opt"><input type="radio" name="q10" value="a"> Increased employee turnover.</label>
+    <label class="opt"><input type="radio" name="q10" value="b"> Improved productivity and a positive work environment.</label>
+    <label class="opt"><input type="radio" name="q10" value="c"> More competition between employees.</label>
+    <label class="opt"><input type="radio" name="q10" value="d"> Less employee satisfaction.</label>
+    <div class="answer" id="a_q10">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：最後一段：enhances productivity + creates a positive work environment。</div>
+    </div>
+  </div>
+
+  <!-- ========================= 主題 2 ========================= -->
+  <div class="topic"><b>主題 2｜旅遊與交通 Travel & Transportation</b></div>
+
+  <div class="sub">閱讀理解 - 1｜文章 1</div>
+  <div class="article">
+    <p>Traveling has become an essential part of modern life, with millions of people traveling for both business and leisure every year. As more people travel, the demand for reliable and efficient transportation services is growing. The airline industry, for example, has seen significant growth in recent years, with budget airlines offering more affordable options for travelers.</p>
+
+    <p>However, traveling can sometimes be stressful, especially when dealing with long lines at airports or delays in flight schedules. To address these issues, many airports are introducing more streamlined processes, such as automated check-in kiosks and biometric security screening. These technologies are designed to reduce wait times and make the travel experience smoother for passengers.</p>
+
+    <p>In addition to air travel, public transportation systems are also evolving to meet the needs of growing populations in urban areas. Many cities around the world are investing in modernizing their transit systems, making them more efficient and accessible. High-speed trains, for instance, are becoming increasingly popular as an alternative to domestic flights, offering faster and more comfortable travel between major cities.</p>
+
+    <p>As the travel and transportation industries continue to expand, the key to success lies in providing convenience and reliability for customers. Whether it is through technological advancements, improved services, or better infrastructure, the goal is to make travel easier, faster, and more enjoyable for everyone.</p>
+  </div>
+
+  <!-- Q11-15 -->
+  <div class="q" data-q="q11" data-ans="a">
+    <p>問題 1: According to the article, what has contributed to the growth of the airline industry?</p>
+    <label class="opt"><input type="radio" name="q11" value="a"> The availability of budget airlines offering affordable options.</label>
+    <label class="opt"><input type="radio" name="q11" value="b"> The reduction of security measures at airports.</label>
+    <label class="opt"><input type="radio" name="q11" value="c"> The expansion of high-speed trains.</label>
+    <label class="opt"><input type="radio" name="q11" value="d"> Increased investment in airport infrastructure.</label>
+    <div class="answer" id="a_q11">
+      <div class="k">✔ 正確答案：A</div>
+      <div class="exp">解析：第一段直接提到 budget airlines offering more affordable options。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q12" data-ans="b">
+    <p>問題 2: What is one way airports are addressing delays and long lines?</p>
+    <label class="opt"><input type="radio" name="q12" value="a"> By eliminating all security measures.</label>
+    <label class="opt"><input type="radio" name="q12" value="b"> By introducing automated check-in kiosks and biometric screening.</label>
+    <label class="opt"><input type="radio" name="q12" value="c"> By reducing the number of flights available.</label>
+    <label class="opt"><input type="radio" name="q12" value="d"> By offering more affordable flight options.</label>
+    <div class="answer" id="a_q12">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：第二段列出 automated check-in kiosks 與 biometric security screening。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q13" data-ans="b">
+    <p>問題 3: What is a feature of high-speed trains mentioned in the article?</p>
+    <label class="opt"><input type="radio" name="q13" value="a"> They are cheaper than domestic flights.</label>
+    <label class="opt"><input type="radio" name="q13" value="b"> They offer faster and more comfortable travel between major cities.</label>
+    <label class="opt"><input type="radio" name="q13" value="c"> They have limited routes between cities.</label>
+    <label class="opt"><input type="radio" name="q13" value="d"> They are only available in rural areas.</label>
+    <div class="answer" id="a_q13">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：第三段：offering faster and more comfortable travel between major cities。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q14" data-ans="b">
+    <p>問題 4: What do modern transportation systems focus on?</p>
+    <label class="opt"><input type="radio" name="q14" value="a"> Increasing the cost of tickets for passengers.</label>
+    <label class="opt"><input type="radio" name="q14" value="b"> Making transportation more efficient and accessible.</label>
+    <label class="opt"><input type="radio" name="q14" value="c"> Reducing the number of vehicles on the road.</label>
+    <label class="opt"><input type="radio" name="q14" value="d"> Offering fewer routes to save costs.</label>
+    <div class="answer" id="a_q14">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：第三段：modernizing transit systems, making them more efficient and accessible。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q15" data-ans="b">
+    <p>問題 5: What is a key to success in the travel and transportation industries?</p>
+    <label class="opt"><input type="radio" name="q15" value="a"> Increasing the cost of tickets.</label>
+    <label class="opt"><input type="radio" name="q15" value="b"> Providing convenience and reliability for customers.</label>
+    <label class="opt"><input type="radio" name="q15" value="c"> Limiting travel options to reduce demand.</label>
+    <label class="opt"><input type="radio" name="q15" value="d"> Reducing the number of transportation options available.</label>
+    <div class="answer" id="a_q15">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：最後一段：key to success lies in providing convenience and reliability。</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sub">閱讀理解 - 2｜文章 2</div>
+  <div class="article">
+    <p>As the global population continues to grow, the demand for sustainable travel options is also increasing. More people are becoming aware of the environmental impact of their travel choices, and many are seeking greener alternatives. Public transportation systems, including buses and trains, are being redesigned to reduce carbon emissions and energy consumption. Electric buses and energy-efficient trains are being introduced in cities worldwide to promote eco-friendly travel.</p>
+
+    <p>Additionally, many travelers are choosing bicycles as a sustainable mode of transport. Cities around the world are investing in bike lanes and bike-sharing programs to encourage this environmentally friendly option. Not only is cycling a great way to reduce one's carbon footprint, but it also promotes a healthier lifestyle.</p>
+
+    <p>For long-distance travel, high-speed trains and electric vehicles are becoming more popular. These transportation options provide faster and greener alternatives to traditional modes of transport such as planes and cars. The goal is to reduce the reliance on fossil fuels and make transportation more sustainable for future generations.</p>
+
+    <p>In conclusion, as the world continues to face environmental challenges, it is essential to adopt sustainable travel practices. By choosing greener modes of transport, we can reduce our impact on the planet and contribute to a more sustainable future.</p>
+  </div>
+
+  <!-- Q16-20 -->
+  <div class="q" data-q="q16" data-ans="b">
+    <p>問題 6: What is one reason why people are choosing greener travel options?</p>
+    <label class="opt"><input type="radio" name="q16" value="a"> To save money on transportation.</label>
+    <label class="opt"><input type="radio" name="q16" value="b"> To reduce their environmental impact.</label>
+    <label class="opt"><input type="radio" name="q16" value="c"> To avoid traffic jams.</label>
+    <label class="opt"><input type="radio" name="q16" value="d"> To travel more comfortably.</label>
+    <div class="answer" id="a_q16">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：第一段：aware of environmental impact… seeking greener alternatives。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q17" data-ans="a">
+    <p>問題 7: What is one feature of sustainable public transportation?</p>
+    <label class="opt"><input type="radio" name="q17" value="a"> The use of electric buses and energy-efficient trains.</label>
+    <label class="opt"><input type="radio" name="q17" value="b"> The reduction of public transport availability.</label>
+    <label class="opt"><input type="radio" name="q17" value="c"> The introduction of gas-powered buses.</label>
+    <label class="opt"><input type="radio" name="q17" value="d"> The elimination of bike-sharing programs.</label>
+    <div class="answer" id="a_q17">
+      <div class="k">✔ 正確答案：A</div>
+      <div class="exp">解析：第一段提到 Electric buses and energy-efficient trains。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q18" data-ans="a">
+    <p>問題 8: What are some benefits of cycling as a mode of transport?</p>
+    <label class="opt"><input type="radio" name="q18" value="a"> It reduces carbon emissions and promotes a healthier lifestyle.</label>
+    <label class="opt"><input type="radio" name="q18" value="b"> It increases air pollution.</label>
+    <label class="opt"><input type="radio" name="q18" value="c"> It is only available in rural areas.</label>
+    <label class="opt"><input type="radio" name="q18" value="d"> It is the least energy-efficient mode of transport.</label>
+    <div class="answer" id="a_q18">
+      <div class="k">✔ 正確答案：A</div>
+      <div class="exp">解析：第二段：reduce carbon footprint + promotes a healthier lifestyle。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q19" data-ans="b">
+    <p>問題 9: What are electric vehicles helping to reduce?</p>
+    <label class="opt"><input type="radio" name="q19" value="a"> The cost of fuel.</label>
+    <label class="opt"><input type="radio" name="q19" value="b"> Fossil fuel reliance and carbon emissions.</label>
+    <label class="opt"><input type="radio" name="q19" value="c"> Noise pollution in urban areas.</label>
+    <label class="opt"><input type="radio" name="q19" value="d"> The demand for high-speed trains.</label>
+    <div class="answer" id="a_q19">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：第三段：reduce reliance on fossil fuels（並呼應減排）。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q20" data-ans="b">
+    <p>問題 10: What is the goal of adopting sustainable travel practices?</p>
+    <label class="opt"><input type="radio" name="q20" value="a"> To increase travel costs.</label>
+    <label class="opt"><input type="radio" name="q20" value="b"> To reduce environmental impact and contribute to a sustainable future.</label>
+    <label class="opt"><input type="radio" name="q20" value="c"> To make transportation less efficient.</label>
+    <label class="opt"><input type="radio" name="q20" value="d"> To encourage air travel.</label>
+    <div class="answer" id="a_q20">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：結論段：reduce our impact… contribute to a more sustainable future。</div>
+    </div>
+  </div>
+
+  <!-- ========================= 主題 3 ========================= -->
+  <div class="topic"><b>主題 3｜銷售與行銷 Sales & Marketing</b></div>
+
+  <div class="sub">閱讀理解 - 1｜文章 1</div>
+  <div class="article">
+    <p>In today's highly competitive market, businesses are constantly looking for ways to attract more customers and increase sales. One of the most effective strategies is through promotional activities. Companies often offer limited-time discounts, bundle deals, and seasonal sales events to create a sense of urgency and encourage customers to make a purchase.</p>
+
+    <p>Advertising also plays a crucial role in the success of promotional campaigns. A well-crafted advertisement can grab the attention of potential customers, convey the key benefits of a product or service, and persuade them to take action. Many companies use a combination of online and offline advertising channels, such as social media, television, print, and outdoor billboards, to reach a wider audience.</p>
+
+    <p>For instance, a clothing retailer might launch a summer sale campaign, offering a 20% discount on all items in the store. To promote this sale, they may use social media ads, posters in malls, and television commercials to spread the word. The goal is to create excitement and drive more foot traffic to the store or website.</p>
+
+    <p>In addition to discounts, companies often rely on loyalty programs to retain customers and encourage repeat purchases. By offering rewards points or exclusive discounts to repeat buyers, businesses can create long-term customer loyalty and increase their sales over time.</p>
+  </div>
+
+  <!-- Q21-25 -->
+  <div class="q" data-q="q21" data-ans="a">
+    <p>問題 1: What is one effective strategy to increase sales mentioned in the article?</p>
+    <label class="opt"><input type="radio" name="q21" value="a"> Offering discounts and bundle deals.</label>
+    <label class="opt"><input type="radio" name="q21" value="b"> Decreasing advertising spending.</label>
+    <label class="opt"><input type="radio" name="q21" value="c"> Reducing the number of products available.</label>
+    <label class="opt"><input type="radio" name="q21" value="d"> Ignoring customer feedback.</label>
+    <div class="answer" id="a_q21">
+      <div class="k">✔ 正確答案：A</div>
+      <div class="exp">解析：第一段：limited-time discounts、bundle deals、seasonal sales。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q22" data-ans="b">
+    <p>問題 2: How does advertising contribute to promotional campaigns?</p>
+    <label class="opt"><input type="radio" name="q22" value="a"> By increasing product prices.</label>
+    <label class="opt"><input type="radio" name="q22" value="b"> By grabbing customers' attention and persuading them to buy.</label>
+    <label class="opt"><input type="radio" name="q22" value="c"> By focusing on long-term customer relationships.</label>
+    <label class="opt"><input type="radio" name="q22" value="d"> By avoiding discounts and promotions.</label>
+    <div class="answer" id="a_q22">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：第二段：grab attention… persuade them to take action。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q23" data-ans="b">
+    <p>問題 3: What channels do companies use for advertising, according to the article?</p>
+    <label class="opt"><input type="radio" name="q23" value="a"> Only social media.</label>
+    <label class="opt"><input type="radio" name="q23" value="b"> A combination of online and offline channels, including social media, television, print, and billboards.</label>
+    <label class="opt"><input type="radio" name="q23" value="c"> Only outdoor billboards.</label>
+    <label class="opt"><input type="radio" name="q23" value="d"> Only print advertisements in newspapers.</label>
+    <div class="answer" id="a_q23">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：第二段完整列出 online + offline（social media/TV/print/billboards）。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q24" data-ans="b">
+    <p>問題 4: What is the goal of a promotional campaign, according to the article?</p>
+    <label class="opt"><input type="radio" name="q24" value="a"> To increase the number of products in stock.</label>
+    <label class="opt"><input type="radio" name="q24" value="b"> To create excitement and encourage purchases.</label>
+    <label class="opt"><input type="radio" name="q24" value="c"> To reduce advertising expenses.</label>
+    <label class="opt"><input type="radio" name="q24" value="d"> To limit customer interaction with the product.</label>
+    <div class="answer" id="a_q24">
+      <div class="k">✔ 正確答案：B</div>
+      <div class="exp">解析：第三段：goal is to create excitement and drive more foot traffic / purchases。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q25" data-ans="a">
+    <p>問題 5: How do loyalty programs help businesses?</p>
+    <label class="opt"><input type="radio" name="q25" value="a"> By offering rewards to customers for their loyalty.</label>
+    <label class="opt"><input type="radio" name="q25" value="b"> By discouraging repeat purchases.</label>
+    <label class="opt"><input type="radio" name="q25" value="c"> By increasing the initial price of products.</label>
+    <label class="opt"><input type="radio" name="q25" value="d"> By reducing the number of products available.</label>
+    <div class="answer" id="a_q25">
+      <div class="k">✔ 正確答案：A</div>
+      <div class="exp">解析：最後一段：offer rewards points / exclusive discounts to repeat buyers。</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sub">閱讀理解 - 2｜文章 2</div>
+  <div class="article">
+    <p>In the world of digital marketing, email campaigns are one of the most effective ways to engage with customers. Brands often send out newsletters, promotions, and personalized offers to their subscribers. These emails are crafted to resonate with the audience, highlighting relevant products or services based on past behavior or preferences.</p>
+
+    <p>Another popular marketing tool is influencer marketing, where companies collaborate with social media influencers to promote their products. Influencers can reach a large audience quickly, and their recommendations often carry more weight with their followers compared to traditional advertising.</p>
+
+    <p>Additionally, search engine optimization (SEO) plays a crucial role in driving traffic to a company's website. By optimizing website content with relevant keywords and improving site structure, companies can rank higher on search engines like Google, making it easier for potential customers to find their products.</p>
+
+    <p>Finally, data analytics is becoming increasingly important in marketing. By analyzing customer data, businesses can make more informed decisions about their campaigns, targeting the right audience with the right message at the right time.</p>
+  </div>
+
+  <!-- Q26-30 -->
+  <div class="q" data-q="q26" data-ans="a">
+    <p>問題 6: What is one way brands engage with customers online?</p>
+    <label class="opt"><input type="radio" name="q26" value="a"> By sending newsletters and personalized offers.</label>
+    <label class="opt"><input type="radio" name="q26" value="b"> By reducing their online presence.</label>
+    <label class="opt"><input type="radio" name="q26" value="c"> By avoiding email communication.</label>
+    <label class="opt"><input type="radio" name="q26" value="d"> By removing their product listings from websites.</label>
+    <div class="answer" id="a_q26">
+      <div class="k">✔ 正確答案：A</div>
+      <div class="exp">解析：第一段：send out newsletters, promotions, personalized offers。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q27" data-ans="a">
+    <p>問題 7: What is influencer marketing?</p>
+    <label class="opt"><input type="radio" name="q27" value="a"> A form of advertising using social media influencers to promote products.</label>
+    <label class="opt"><input type="radio" name="q27" value="b"> A method of increasing the number of emails sent to customers.</label>
+    <label class="opt"><input type="radio" name="q27" value="c"> A technique for improving website search engine rankings.</label>
+    <label class="opt"><input type="radio" name="q27" value="d"> A way of increasing the product prices for high-demand items.</label>
+    <div class="answer" id="a_q27">
+      <div class="k">✔ 正確答案：A</div>
+      <div class="exp">解析：第二段定義：collaborate with influencers to promote products。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q28" data-ans="a">
+    <p>問題 8: What is the role of SEO in marketing?</p>
+    <label class="opt"><input type="radio" name="q28" value="a"> To optimize content and improve website ranking on search engines.</label>
+    <label class="opt"><input type="radio" name="q28" value="b"> To reduce the number of customers visiting a website.</label>
+    <label class="opt"><input type="radio" name="q28" value="c"> To increase email subscriptions.</label>
+    <label class="opt"><input type="radio" name="q28" value="d"> To improve customer service response time.</label>
+    <div class="answer" id="a_q28">
+      <div class="k">✔ 正確答案：A</div>
+      <div class="exp">解析：第三段：rank higher on search engines by keywords + structure。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q29" data-ans="a">
+    <p>問題 9: How can companies use customer data in marketing?</p>
+    <label class="opt"><input type="radio" name="q29" value="a"> By analyzing data to make informed marketing decisions.</label>
+    <label class="opt"><input type="radio" name="q29" value="b"> By ignoring customer behavior and preferences.</label>
+    <label class="opt"><input type="radio" name="q29" value="c"> By limiting product offerings.</label>
+    <label class="opt"><input type="radio" name="q29" value="d"> By decreasing website traffic.</label>
+    <div class="answer" id="a_q29">
+      <div class="k">✔ 正確答案：A</div>
+      <div class="exp">解析：最後一段：analyzing customer data → more informed decisions。</div>
+    </div>
+  </div>
+
+  <div class="q" data-q="q30" data-ans="a">
+    <p>問題 10: What is the importance of data analytics in marketing?</p>
+    <label class="opt"><input type="radio" name="q30" value="a"> It helps businesses make informed decisions based on customer data.</label>
+    <label class="opt"><input type="radio" name="q30" value="b"> It increases the number of products offered.</label>
+    <label class="opt"><input type="radio" name="q30" value="c"> It reduces the importance of online advertising.</label>
+    <label class="opt"><input type="radio" name="q30" value="d"> It lowers the cost of marketing campaigns.</label>
+    <div class="answer" id="a_q30">
+      <div class="k">✔ 正確答案：A</div>
+      <div class="exp">解析：最後一段：data analytics → informed decisions + right message/time/audience。</div>
+    </div>
+  </div>
+
+  <!-- 控制區 -->
+  <div class="controls">
+    <button id="btnScore" onclick="checkAnswers()">查看成績</button>
+    <button id="btnReset" onclick="resetAll()">重新作答</button>
+  </div>
+  <div class="score" id="score"></div>
+  <div class="small">提示：如果沒選某題，該題就算錯；答案會在按下「查看成績」後顯示。</div>
+</div>
+
+<script>
+function checkAnswers(){
+  const blocks = document.querySelectorAll('.q');
+  let correct = 0;
+  let total = blocks.length;
+
+  blocks.forEach(b=>{
+    const qname = b.getAttribute('data-q');
+    const ans = b.getAttribute('data-ans');
+    const chosen = document.querySelector('input[name="'+qname+'"]:checked');
+
+    if(chosen && chosen.value === ans) correct++;
+
+    // show answer block
+    const ab = document.getElementById('a_' + qname);
+    if(ab) ab.style.display = 'block';
+  });
+
+  document.getElementById('score').textContent = `你的得分：${correct} / ${total}`;
+  window.scrollTo({top: document.getElementById('score').offsetTop - 20, behavior: 'smooth'});
+}
+
+function resetAll(){
+  // uncheck all radios
+  const radios = document.querySelectorAll('input[type="radio"]');
+  radios.forEach(r=> r.checked = false);
+
+  // hide all answers
+  const answers = document.querySelectorAll('.answer');
+  answers.forEach(a=> a.style.display = 'none');
+
+  document.getElementById('score').textContent = '';
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+</body>
+</html>

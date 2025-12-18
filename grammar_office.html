@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>職場辦公室文法測驗｜TOEIC 550</title>
+
+<style>
+body {
+    font-family:"Noto Sans TC",sans-serif;
+    background:#f7f5f2;
+    padding:20px;
+    color:#444;
+}
+.container {
+    max-width:850px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+}
+.question {
+    margin-bottom:25px;
+    padding:15px;
+    background:#fafafa;
+    border-left:5px solid #c8c2bd;
+}
+.option {
+    margin:6px 0;
+    display:block;
+}
+.answer-block {
+    margin-top:10px;
+    padding:10px;
+    background:#f0edea;
+    border-radius:8px;
+    display:none;
+}
+.correct { color:#3c7a3c; font-weight:bold; }
+.wrong { color:#b00020; font-weight:bold; }
+
+button {
+    display:block;
+    margin:30px auto;
+    padding:12px 28px;
+    background:#c4b7a6;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+.result {
+    text-align:center;
+    font-size:22px;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>TOEIC 550 職場辦公室英文【文法】測驗（10 題）</h2>
+
+<form id="quizForm"></form>
+
+<button onclick="checkAnswers()">送出答案</button>
+<div id="result" class="result"></div>
+</div>
+
+<script>
+const questions = [
+{q:"1. Please submit the report _____ Friday.",
+ options:["at","in","by","from"],
+ answer:"by",
+ explain:"by + 時間＝截止時間（TOEIC 常考）"},
+
+{q:"2. The manager asked all staff _____ attend the meeting.",
+ options:["to","for","with","of"],
+ answer:"to",
+ explain:"ask + 人 + to + 原形動詞"},
+
+{q:"3. Ms. Lee is responsible _____ customer complaints.",
+ options:["for","to","with","of"],
+ answer:"for",
+ explain:"be responsible for 為固定搭配"},
+
+{q:"4. The email _____ by the manager yesterday.",
+ options:["send","sent","was sent","is sending"],
+ answer:"was sent",
+ explain:"被動語態：was/were + p.p."},
+
+{q:"5. We will discuss the issue _____ the meeting.",
+ options:["at","on","in","by"],
+ answer:"at",
+ explain:"at the meeting 為固定用法"},
+
+{q:"6. He works _____ the sales department.",
+ options:["at","on","in","by"],
+ answer:"in",
+ explain:"in + department"},
+
+{q:"7. The document needs _____ before approval.",
+ options:["review","reviewed","reviewing","reviews"],
+ answer:"reviewing",
+ explain:"need + V-ing 表被動"},
+
+{q:"8. Please let me know _____ you are available.",
+ options:["if","what","that","which"],
+ answer:"if",
+ explain:"if = 是否"},
+
+{q:"9. She has worked here _____ five years.",
+ options:["since","for","during","from"],
+ answer:"for",
+ explain:"for + 一段時間"},
+
+{q:"10. The meeting was canceled _____ the storm.",
+ options:["because","because of","although","despite"],
+ answer:"because of",
+ explain:"because of + 名詞"}
+];
+
+const form = document.getElementById("quizForm");
+
+questions.forEach((q,i)=>{
+    let html = `<div class="question"><p>${q.q}</p>`;
+    q.options.forEach(opt=>{
+        html += `<label class="option">
+        <input type="radio" name="q${i}" value="${opt}"> ${opt}
+        </label>`;
+    });
+    html += `<div class="answer-block" id="ans${i}"></div></div>`;
+    form.innerHTML += html;
+});
+
+function checkAnswers(){
+    let score = 0;
+
+    questions.forEach((q,i)=>{
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        const ansDiv = document.getElementById("ans"+i);
+
+        if(selected && selected.value === q.answer){
+            score++;
+            ansDiv.innerHTML = `<span class="correct">✔ 正確</span><br>${q.explain}`;
+        }else{
+            ansDiv.innerHTML = `<span class="wrong">✘ 錯誤</span><br>
+            正確答案：<b>${q.answer}</b><br>${q.explain}`;
+        }
+        ansDiv.style.display = "block";
+    });
+
+    document.getElementById("result").innerText =
+        `你的分數是 ${score} / ${questions.length}`;
+}
+</script>
+
+</body>
+</html>

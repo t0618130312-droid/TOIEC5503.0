@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>旅遊與交通文法測驗｜TOEIC 550</title>
+
+<style>
+body{
+  font-family:"Noto Sans TC", sans-serif;
+  background:#f7f5f2;
+  padding:20px;
+  color:#444;
+}
+.container{
+  max-width:850px;
+  margin:auto;
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+}
+.question{
+  margin-bottom:25px;
+  padding:15px;
+  background:#fafafa;
+  border-left:5px solid #c8c2bd;
+}
+.option{
+  margin:6px 0;
+  display:block;
+}
+.answer-block{
+  margin-top:8px;
+  padding:10px;
+  background:#f0edea;
+  border-radius:8px;
+  display:none;
+}
+.correct-text{
+  color:#3c7a3c;
+  font-weight:bold;
+}
+.score{
+  text-align:center;
+  font-size:20px;
+  margin-top:20px;
+  display:none;
+}
+button{
+  display:block;
+  margin:30px auto;
+  padding:12px 30px;
+  background:#c4b7a6;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+button:hover{
+  background:#b5a492;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>✈️ TOEIC 550 旅遊與交通英文【文法】測驗（10 題）</h2>
+
+<form id="quizForm"></form>
+
+<button type="button" onclick="checkAnswers()">送出答案</button>
+
+<div class="score" id="scoreBox"></div>
+</div>
+
+<script>
+const questions = [
+{
+ q:"1. Passengers must arrive _____ the airport two hours early.",
+ options:["at","in","on","to"],
+ answer:"at",
+ explain:"arrive at + 小地點（機場、車站）"
+},
+{
+ q:"2. The flight was delayed _____ bad weather.",
+ options:["because","because of","although","during"],
+ answer:"because of",
+ explain:"because of + 名詞"
+},
+{
+ q:"3. Please check _____ at least 30 minutes before departure.",
+ options:["in","on","out","up"],
+ answer:"in",
+ explain:"check in 為固定片語"
+},
+{
+ q:"4. The train _____ at 7:30 a.m. every day.",
+ options:["leave","leaves","left","is leaving"],
+ answer:"leaves",
+ explain:"固定時刻 → 現在簡單式"
+},
+{
+ q:"5. All luggage must _____ at the counter.",
+ options:["check","checked","be checked","checking"],
+ answer:"be checked",
+ explain:"被動語態：must + be + p.p."
+},
+{
+ q:"6. We stayed at the hotel _____ three nights.",
+ options:["since","for","during","from"],
+ answer:"for",
+ explain:"for + 一段時間"
+},
+{
+ q:"7. The boarding gate will close _____ 10 minutes.",
+ options:["after","before","during","until"],
+ answer:"after",
+ explain:"after + 時間點"
+},
+{
+ q:"8. Please make sure your passport is _____.",
+ options:["valid","validate","validity","validating"],
+ answer:"valid",
+ explain:"is + 形容詞"
+},
+{
+ q:"9. The bus stop is located _____ the station.",
+ options:["near","between","among","during"],
+ answer:"near",
+ explain:"near + 地點"
+},
+{
+ q:"10. The flight was canceled _____ the strike.",
+ options:["because","because of","although","however"],
+ answer:"because of",
+ explain:"because of + 名詞"
+}
+];
+
+const form = document.getElementById("quizForm");
+
+questions.forEach((q,i)=>{
+  let html = `<div class="question"><p><b>${q.q}</b></p>`;
+  q.options.forEach(opt=>{
+    html += `
+      <label class="option">
+        <input type="radio" name="q${i}" value="${opt}"> ${opt}
+      </label>`;
+  });
+  html += `
+    <div class="answer-block" id="ans${i}">
+      <p>正確答案：<span class="correct-text">${q.answer}</span></p>
+      <p>文法解析：${q.explain}</p>
+    </div>
+  </div>`;
+  form.innerHTML += html;
+});
+
+function checkAnswers(){
+  let score = 0;
+  questions.forEach((q,i)=>{
+    const selected = document.querySelector(`input[name="q${i}"]:checked`);
+    if(selected && selected.value === q.answer){
+      score++;
+    }
+    document.getElementById("ans"+i).style.display = "block";
+  });
+  const scoreBox = document.getElementById("scoreBox");
+  scoreBox.style.display = "block";
+  scoreBox.innerHTML = `🎯 你的分數：${score} / ${questions.length}`;
+}
+</script>
+
+</body>
+</html>
+
